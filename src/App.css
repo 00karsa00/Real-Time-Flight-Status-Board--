@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Flight List Css */
+.main-container {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 800px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h3 {
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flight-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0;
+  font-size: 1em;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flight-table th,
+.flight-table td {
+  border: 1px solid #dddddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.flight-table th {
+  background-color: #009879;
+  color: #ffffff;
+}
+
+.flight-table tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.flight-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.flight-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.view-btn {
+  background-color: #009879;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.view-btn:hover {
+  background-color: #007a63;
+}
+
+
+/* Flight Details Css */
+.flight-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.flight-details {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.flight-info {
+  width: 100%;
+}
+
+.flight-info h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.flight-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.flight-info p strong {
+  color: #555;
+}
+
+.back-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
   color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+.back-btn:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flight-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f2f5;
+  height: 100vh;
+}
+
+.flight-details {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flight-info {
+  width: 100%;
+}
+
+.flight-info h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.flight-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.flight-info p strong {
+  color: #555;
+}
+
+
+/* Container for the error message */
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+
+.loading-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d1ecf1;
+  color: #0c5460;
+  padding: 20px;
+  border: 1px solid #bee5eb;
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
 }
